@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Match Summary</title>
+</head>
+<body>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Team</th>
+            <th scope="col">Opponent</th>
+            <th scope="col">match date</th>
+            <th scope="col">match venue</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for match in matches %}
+          <tr>
+            <td>{{match.team_id}}</td>
+            <td>{{match.opponent_id}}</td>
+            <td>{{match.match_date}}</td>
+            <td>{{match.Venue}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+</body>
+</html>
+

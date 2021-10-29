@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Player Profiles</title>
+</head>
+<body>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Player Name</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">City</th>
+            <th scope="col">Batting Hand</th>
+            <th scope="col">Bowling Hand</th>
+            <th scope="col">Role</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for player in players %}
+          <tr>
+            <td>{{player.player_name}}</td>
+            <td>{{player.date_of_birth}}</td>
+            <td>{{player.city}}</td>
+            <td>{{player.batting_hand}}</td>
+            <td>{{player.bowling_hand}}</td>
+            <td>{{player.role}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+</body>
+</html>
