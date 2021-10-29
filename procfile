@@ -1,0 +1,1 @@
+web: gunicorn CricketLeagueTournament.wsgi --log-file -
