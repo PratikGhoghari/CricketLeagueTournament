@@ -57,7 +57,6 @@ class Match(models.Model):
     match_lose_id = models.ForeignKey(Team, on_delete=models.CASCADE, related_name="team_match_lose_id")
     man_of_match = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="man_of_match_id")
     bowler_of_match = models.ForeignKey(Player,on_delete=models.CASCADE, related_name="bowler_of_match_id")
-    
     def __str__(self):
         return self.team_id.name + " " + self.opponent_id.name
 

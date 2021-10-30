@@ -58,7 +58,7 @@ def get_match_summary(request, pk):
     match_summaries = Match.objects.filter(id=pk)
     #print(match_summaries)
     #print(match_summaries.bowler_of_match)
-    match_serializer = MatchSerializer(match_summaries)
+    match_serializer = MatchSerializer(match_summaries,many=True)
     #return render(request, 'api/match_summary.html', context=context)
     return Response(match_serializer.data)
 
