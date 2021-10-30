@@ -20,6 +20,7 @@ from django.views import static
 from django.views.static import serve
 from django.conf.urls import url
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
